@@ -1,4 +1,4 @@
-Browser's regular checkboxes and radios are often ugly or may just not fit into your design. In this turorial I show you how to apply your own styling for radios and checkboxes using CSS and [fontawesome icons](http://fontawesome) for the checkmark. Feel free to change the styling according to your needs (depending on your icon font and your default font you have to do it anyway). In addition I explain how create an on/off switch. I use CSS3, but I provide a fallback to render older browser's default checkbox and radio (IE8). For better code structure I am using [SCSS (SASS)](http://SCSS.com) in this tutorial, but you can find the compiled CSS at the end.
+Browser's regular checkboxes and radios are often ugly or may just not fit into your design. In this turorial I show you how to apply your own styling for radios and checkboxes using CSS and [fontawesome icons](http://fontawesome) for the checkmark. Feel free to change the styling according to your needs (depending on your icon font and your default font you have to do it anyway). In addition I explain how create an on/off switch. I use CSS3, but I provide a fallback to render older browser's default checkbox and radio (IE8). For better code structure I am using [SCSS (SASS)](http://sass-lang.com/guide) in this tutorial, but you can find the compiled CSS at the end.
 
 ###[Checkout the Demo!](http://custom-inputs.felixhagspiel.de/)
 
@@ -314,7 +314,6 @@ And hurray, we are finished! :) The whole file should look like this now:
         height: 0;
         display: none;
         opacity: 0;
-        // this selects the next label after the input-element
         & + label {
             display: inline-block;
             margin-right: $margin-el;
@@ -477,9 +476,9 @@ And hurray, we are finished! :) The whole file should look like this now:
 
 Of course there are still some things left you have to do, for example increase the size of the inputs on mobile devices and so on, but this should give you a good start.
 
-[Get SCSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/src/custom-inputs.scss)
+[View SCSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/custom-inputs.scss)
 
-[Get CSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/src/custom-inputs.css)
+[View CSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/custom-inputs.css)
 
 [Visit github](https://github.com/felixhagspiel/customInputs)
 
