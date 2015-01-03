@@ -1,5 +1,7 @@
 $color-default: #849FBB; // default color
+$color-default-light: #DDDDDD; // default color light
 $color-active: #57CB85; // color when active or checked
+$color-active-light: #9EFFC4; // active color light
 $color-focus: #6FB5FB; // color when focused
 
 $margin-el: 7px; // default margin for our custom inputs
@@ -137,7 +139,7 @@ $margin-el: 7px; // default margin for our custom inputs
             position: absolute;
             cursor: pointer;
             pointer-events: none;
-            box-shadow: 1px 1px 1px #DDDDDD;
+            box-shadow: 1px 1px 1px $color-default-light;
             // add some CSS3-animations
             -webkit-transition: right .1s ease-in, background-color .1s ease-in;
             -moz-transition: right .1s ease-in, background-color .1s ease-in;
@@ -146,10 +148,10 @@ $margin-el: 7px; // default margin for our custom inputs
         }
     }
     &:checked + label:after {
-        background-color: #9EFFC4;
+        background-color: $color-active-light;
     }
     &:not(:checked) + label:after {
-        background-color: #DDDDDD;
+        background-color: $color-default-light;
     }
     &:checked + label + .fh-switch-knob {
         right:5px;

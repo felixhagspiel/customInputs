@@ -28,7 +28,9 @@ Lets start with the markup. Please note that the order of the `input` and `label
 Now we create a SCSS-file and start with the actual styling. First we define color and margin variables at the top of the file to make changing the look of our elements easier:
 
     $color-default: #849FBB; // default color
+    $color-default-light: #DDDDDD; // default color light
     $color-active: #57CB85; // color when active or checked
+    $color-active-light: #9EFFC4; // active color light
     $color-focus: #6FB5FB; // color when focused
 
     $margin-el: 7px; // default margin for our custom inputs
@@ -117,7 +119,7 @@ Now we style the disabled-state by adding some opacity and a `not-allowed` curso
         }
     }
 
-Now we start with the actual styling. Lets begin with the checkbox. By using the pseudo-classes `:selected` and `:not(:selected)` we can change our label-styling depending on the checked-state of our hidden input-element (it's `:selected`-state is still changed by clicking on our label). As we have to differ between `[type="checkbox"]` and `[type="radio"]` we put it in a separate block outside of our base code:
+Now we start with the actual styling. Lets begin with the checkbox. By using the pseudoclasses `:selected` and `:not(:selected)` we can change our label styling depending on the checked state of our hidden input element (it's `:selected` state is still changed by clicking on our label). As we have to differ between `[type="checkbox"]` and `[type="radio"]` we put them in separate blocks outside of our base code:
 
     // styling for checkbox for both states
     .fh-checkbox > [type="checkbox"] + label:before {
@@ -209,7 +211,7 @@ Now we hide the default checkbox and style our label, as we did before:
         }
     }
 
-Next we style the background bar of the switch via the `:after`-element of the label: 
+Next we style the background bar of the switch via the `:after` element of the label: 
 
     .fh-switch > [type="checkbox"] {
         //...
@@ -243,7 +245,7 @@ Now we add the base styling for the switch knob:
                 position: absolute;
                 cursor: pointer;
                 pointer-events: none;
-                box-shadow: 1px 1px 1px #DDDDDD;
+                box-shadow: 1px 1px 1px $color-default-light;
                 // add some CSS3-animations
                 -webkit-transition: right .1s ease-in, background-color .1s ease-in;
                 -moz-transition: right .1s ease-in, background-color .1s ease-in;
@@ -253,19 +255,19 @@ Now we add the base styling for the switch knob:
         }
     }
 
-No we change the appearence of the switch bar depending on the `checked` state:
+Here we define the appearence of the switch bar depending on the `checked` state:
 
     .fh-switch > [type="checkbox"] {
         //...
         &:checked + label:after {
-            background-color: #9EFFC4;
+            background-color: $color-active-light;
         }
         &:not(:checked) + label:after {
-            background-color: #DDDDDD;
+            background-color: $color-default-light;
         }
     }
 
-And the same for the switch-knob:
+And we do the same for the switch-knob:
 
     .fh-switch > [type="checkbox"] {
         //...
@@ -297,10 +299,12 @@ Now only the `:focus` and `disabled` states are missing:
         }
     }
 
-And hurray, we are finished! :) The whole file should look like this now:
+And hurray, we are finished! :) The whole file containing radios, checkboxes and the switch should look like this now:
 
     $color-default: #849FBB; // default color
+    $color-default-light: #DDDDDD; // default color light
     $color-active: #57CB85; // color when active or checked
+    $color-active-light: #9EFFC4; // active color light
     $color-focus: #6FB5FB; // color when focused
 
     $margin-el: 7px; // default margin for our custom inputs
@@ -438,7 +442,7 @@ And hurray, we are finished! :) The whole file should look like this now:
                 position: absolute;
                 cursor: pointer;
                 pointer-events: none;
-                box-shadow: 1px 1px 1px #DDDDDD;
+                box-shadow: 1px 1px 1px $color-default-light;
                 // add some CSS3-animations
                 -webkit-transition: right .1s ease-in, background-color .1s ease-in;
                 -moz-transition: right .1s ease-in, background-color .1s ease-in;
@@ -450,7 +454,7 @@ And hurray, we are finished! :) The whole file should look like this now:
             background-color: #9EFFC4;
         }
         &:not(:checked) + label:after {
-            background-color: #DDDDDD;
+            background-color: $color-default-light;
         }
         &:checked + label + .fh-switch-knob {
             right:5px;
@@ -476,10 +480,10 @@ And hurray, we are finished! :) The whole file should look like this now:
 
 Of course there are still some things left you have to do, for example increase the size of the inputs on mobile devices and so on, but this should give you a good start.
 
+If you encounter any errors in this tutorial or if you think something is not understandable, or if you see something which could be done better otherwise, please create a pull-request on github or [contact me](http://felixhagspiel.de/contact)!
+
 [View SCSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/custom-inputs.scss)
 
 [View CSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/custom-inputs.css)
 
 [Visit github](https://github.com/felixhagspiel/customInputs)
-
-If you encounter any errors in this tutorial or if you think something is not understandable, or if you see something which could be done better otherwise, please create a pull-request on github or [contact me](http://felixhagspiel.de/contact)!

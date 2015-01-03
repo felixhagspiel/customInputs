@@ -114,15 +114,15 @@
       position: absolute;
       cursor: pointer;
       pointer-events: none;
-      box-shadow: 1px 1px 1px #DDDDDD;
+      box-shadow: 1px 1px 1px #dddddd;
       -webkit-transition: right .1s ease-in, background-color .1s ease-in;
       -moz-transition: right .1s ease-in, background-color .1s ease-in;
       -o-transition: right .1s ease-in, background-color .1s ease-in;
       -ms-transition: right .1s ease-in, background-color .1s ease-in; }
   .fh-switch > [type="checkbox"]:checked + label:after {
-    background-color: #9EFFC4; }
+    background-color: #9effc4; }
   .fh-switch > [type="checkbox"]:not(:checked) + label:after {
-    background-color: #DDDDDD; }
+    background-color: #dddddd; }
   .fh-switch > [type="checkbox"]:checked + label + .fh-switch-knob {
     right: 5px;
     background-color: #57cb85; }
