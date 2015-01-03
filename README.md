@@ -478,9 +478,9 @@ And hurray, we are finished! :) The whole file should look like this now:
 
 Of course there are still some things left you have to do, for example increase the size of the inputs on mobile devices and so on, but this should give you a good start.
 
-[Get SCSS file](http://custom-inputs.felixhagspiel.de/custom-inputs.scss)
+[Get SCSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/src/custom-inputs.scss)
 
-[Get CSS file](http://custom-inputs.felixhagspiel.de/custom-inputs.css)
+[Get CSS file](https://raw.githubusercontent.com/felixhagspiel/customInputs/master/src/custom-inputs.css)
 
 [Visit github](https://github.com/felixhagspiel/customInputs)
 
