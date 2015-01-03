@@ -13,7 +13,6 @@ $margin-el: 7px; // default margin for our custom inputs
     height: 0;
     display: none;
     opacity: 0;
-    // this selects the next label after the input-element
     & + label {
         display: inline-block;
         margin-right: $margin-el;

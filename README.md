@@ -3,11 +3,11 @@ Browser's regular checkboxes and radios are often ugly or may just not fit into 
 ###[Checkout the Demo!](http://custom-inputs.felixhagspiel.de/)
 
 ##Checkboxes and radios
-I use prefixes for my code so I don't have to worry about overriding third party code. I use `fh-` in this example, but you can use your own. As the styles for checkboxes and radios are pretty much the same, I put it together to avoid code duplication. For better readability I only show the code belonging to the current step and replace the other code with `// ...`. You can find the complete code at the end. 
+I use prefixes for my code so I don't have to worry about overriding third party code. I use `fh-` in this example, but of course you can use your own. As the styles for checkboxes and radios are pretty much the same, I put them together to avoid code duplication. For better readability I only show the code belonging to the current step and replace the rest of the code with `// ...`. You can find the complete code at the end. 
 
-Let's begin! As styling of the default input elements is limited, we will just hide them and create our own styling depending on the state of the input.
+Let's begin! As styling of the default input elements is limited, we will just hide them completely and create our own styling depending on the state of the input.
 
-Lets start with the markup. Please note that the order of `input` and `label` is important!
+Lets start with the markup. Please note that the order of the `input` and `label` elements is important!
 
     <!-- Checkbox -->
     <span class="fh-checkbox">
@@ -55,7 +55,6 @@ Now we add some margins and paddings to the label-element to make room for the c
     .fh-checkbox > [type="checkbox"],
     .fh-radio > [type="radio"] {
         // ...
-        // this selects the next label after the input-element
         & + label {
             display: inline-block;
             margin-right: $margin-el;
