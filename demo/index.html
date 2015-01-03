@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom inputs demo</title>
+	<meta charset="utf-8">
+	<meta name="description" content="CSS only input styling">
+	<meta name="author" content="Felix Hagspiel">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="custom-inputs.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #F5F5F5;
+				margin: 0;
+			}
+			section {
+				padding-left: 15px;
+			}
+			.main-wrapper {
+				width: 100%;
+				padding: 20px;
+				margin-top: 120px;
+				margin-bottom: 80px;
+				background-color: #fff;
+				box-shadow: 0px 3px 4px rgb(202, 202, 202);
+			}
+			.content-wrapper {
+				width: 100%;
+				max-width: 600px;
+				margin: auto;
+			}
+	</style>
+</head>
+<body>
+	<a href="https://github.com/felixhagspiel/customInputs"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+		<div class="main-wrapper">
+			<div class="content-wrapper">
+				<h1>Custom input elements demo</h1>
+				<section>
+					<h4><a href="http://blog.felixhagspiel.de/index.php/posts/custom-inputs">Back to blog post</a></h4>
+					<h4><a href="https://github.com/felixhagspiel/customInputs">Back to github</a></h4>
+				</section>
+				<h2>Checkboxes</h2>
+				<section>
+					<span class="fh-checkbox">
+						<input type="checkbox" id="checkbox-id" name="mycheckbox" checked>
+						<label for="checkbox-id">My first checkbox</label>
+					</span>
+				</section>
+				<section>
+					<span class="fh-checkbox">
+							<input type="checkbox" id="checkbox-id2" name="mycheckbox">
+							<label for="checkbox-id2">The second checkbox</label>
+					</span>
+				</section>
+				<section>
+					<span class="fh-checkbox">
+						<input type="checkbox" id="checkbox-id3" name="mycheckbox">
+						<label for="checkbox-id3">Another checkbox</label>
+					</span>
+				</section>
+				<h2>Radios</h2>
+				<section>
+					<span class="fh-radio">
+						<input type="radio" id="radio-id" name="myradio" checked>
+						<label for="radio-id">A radio</label>
+					</span>
+					<span class="fh-radio">
+						<input type="radio" id="radio-id3" name="myradio">
+						<label for="radio-id3">Another radio</label>
+					</span>
+					<span class="fh-radio">
+						<input type="radio" id="radio-id4" name="myradio">
+						<label for="radio-id4">One more radio</label>
+					</span>
+				</section>
+				<h2>On/off switch</h2>
+				<section>
+					<span class="fh-switch">
+						<input type="checkbox" id="toggle-id" name="mytoggle">
+						<label for="toggle-id">Switch 1</label>
+						<span class="fh-switch-knob"></span>
+					</span>
+				</section>
+				<section>
+					<span class="fh-switch">
+						<input type="checkbox" id="toggle-id2" name="mytoggle" checked>
+						<label for="toggle-id2">Switch 2</label>
+						<span class="fh-switch-knob"></span>
+					</span>
+				</section>
+				<h2>Download</h2>
+				<section>
+					<h4><a href="custom-inputs.scss" download="custom-inputs.scss">Download SCSS file</a></h4>
+					<h4><a href="custom-inputs.css" download="custom-inputs.css">Download CSS file</a></h4>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
