@@ -478,7 +478,7 @@ And hurray, we are finished! :) The whole file containing radios, checkboxes and
         }
     }
 
-Of course there are still some things left you have to do, for example increase the size of the inputs on mobile devices and so on, but this should give you a good start.
+Note that the code can be optimized, i.e. you could put the different `&:not(:checked) + label + ...` and the `&:checked + label + ...` of the on/off switch together, but I wrote it like this for better understanding. And of course there are still some other things left you have to do, for example increase the size of the inputs on mobile devices and so on. But this tutorial should give you a good start.
 
 If you encounter any errors in this tutorial or if you think something is not understandable, or if you see something which could be done better otherwise, please create a pull-request on github or [contact me](http://felixhagspiel.de/contact)!
 
