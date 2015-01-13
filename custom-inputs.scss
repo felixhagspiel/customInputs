@@ -11,51 +11,55 @@ $margin-el: 7px; // default margin for our custom inputs
  */
 .fh-checkbox > [type="checkbox"],
 .fh-radio > [type="radio"] {
-    width: 0;
-    height: 0;
-    display: none;
-    opacity: 0;
-    & + label {
-        display: inline-block;
-        margin-right: $margin-el;
-        margin-top: $margin-el;
-        margin-bottom: $margin-el;
-        padding-left: 22px;
-        padding-top: 2px;
-        position: relative;
-        cursor: pointer;
-        &:before {
-            // position elements absolute to parent container
-            position: absolute;
+    &:checked,
+    &:not(:checked) {
+        width: 0;
+        height: 0;
+        display: none;
+        opacity: 0;
+        & + label {
             display: inline-block;
-            bottom: 1px;
-            left: 0;
-            width: 13px;
-            height: 13px;
-            border: 2px solid $color-default;
-            color: $color-default;
+            margin-right: $margin-el;
+            margin-top: $margin-el;
+            margin-bottom: $margin-el;
+            padding-left: 22px;
+            padding-top: 2px;
+            position: relative;
+            cursor: pointer;
+            &:before {
+                // position elements absolute to parent container
+                position: absolute;
+                display: inline-block;
+                bottom: 1px;
+                left: 0;
+                width: 13px;
+                height: 13px;
+                border: 2px solid $color-default;
+                color: $color-default;
+            }
+            &:hover:before {
+                // add some hover styling
+                background-color: $color-default;
+            }
         }
-        &:hover:before {
-            // add some hover styling
-            background-color: $color-default;
+        &:focus + label:before {
+            border-color: $color-focus;
+            box-shadow: 0 0 6px 0 $color-focus;
         }
-    }
-    &:focus + label:before {
-        border-color: $color-focus;
-        box-shadow: 0 0 6px 0 $color-focus;
-    }
-    &[disabled] + label {
-        cursor: not-allowed;
-        opacity: .4;
-        &:before {
-            opacity: .7;
+        &[disabled] + label {
+            cursor: not-allowed;
+            opacity: .4;
+            &:before {
+                opacity: .7;
+            }
         }
     }
 }
 // styling for checkbox for both states
-.fh-checkbox > [type="checkbox"] + label:before {
+.fh-checkbox > [type="checkbox"]:checked + label:before,
+.fh-checkbox > [type="checkbox"]:not(:checked) + label:before {
     // set icon font
-    font-family: "FontAwesome", sans-serif;
+    font-family: "FontAwesome";
     font-size: 13px;
     text-align: center;
     // add some CSS3-animations
@@ -63,7 +67,7 @@ $margin-el: 7px; // default margin for our custom inputs
     -moz-transition: border-color .2s ease-in, background-color .2s ease-in;
     -o-transition: border-color .2s ease-in, background-color .2s ease-in;
     -ms-transition: border-color .2s ease-in, background-color .2s ease-in;
-    transition: border-color .2s ease-in, background-color .2s ease-in;
+    transition: border-color .2s ease-in, background-color .2s ease-in;        
 }
 // styling for checkbox when selected
 .fh-checkbox > [type="checkbox"]:checked + label:before {
@@ -79,7 +83,8 @@ $margin-el: 7px; // default margin for our custom inputs
     content: "";
 }
 // styling for radio for both states
-.fh-radio > [type="radio"] + label:before {
+.fh-radio > [type="radio"]:checked + label:before,
+.fh-radio > [type="radio"]:not(:checked) + label:before, {
     content: "";
     border-radius: 15px;
     // add some CSS3-animations
@@ -107,7 +112,8 @@ $margin-el: 7px; // default margin for our custom inputs
 .fh-switch {
     position: relative;
 }
-.fh-switch > [type="checkbox"] {
+.fh-switch > [type="checkbox"]:checked,
+.fh-switch > [type="checkbox"]:not(:checked) {
     width: 0;
     height: 0;
     display: none;
@@ -130,7 +136,7 @@ $margin-el: 7px; // default margin for our custom inputs
             position: absolute;
             border-radius: 30px;
         }
-        &+ .fh-switch-knob {
+        & + .fh-switch-knob {
             top: 0;
             width: 20px;
             height: 20px;
@@ -147,20 +153,6 @@ $margin-el: 7px; // default margin for our custom inputs
             -ms-transition: right .1s ease-in, background-color .1s ease-in;
         }
     }
-    &:checked + label:after {
-        background-color: $color-active-light;
-    }
-    &:not(:checked) + label:after {
-        background-color: $color-default-light;
-    }
-    &:checked + label + .fh-switch-knob {
-        right:5px;
-        background-color: $color-active;
-    }
-    &:not(:checked) + label + .fh-switch-knob {
-        right: 25px;
-        background-color: $color-default;
-    }
     &:focus + label:after,
     &:focus + label + .fh-switch-knob {
         box-shadow: 0 0 6px 0 $color-focus;
@@ -173,4 +165,18 @@ $margin-el: 7px; // default margin for our custom inputs
             opacity: 0.4;
         }
     }
+}
+.fh-switch > [type="checkbox"]:checked + label:after {
+    background-color: $color-active-light;
+}
+.fh-switch > [type="checkbox"]:not(:checked) + label:after {
+    background-color: $color-default-light;
+}
+.fh-switch > [type="checkbox"]:checked + label + .fh-switch-knob {
+    right:5px;
+    background-color: $color-active;
+}
+.fh-switch > [type="checkbox"]:not(:checked) + label + .fh-switch-knob {
+    right: 25px;
+    background-color: $color-default;
 }
